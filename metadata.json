@@ -1,0 +1,6 @@
+{
+  "name": "Website Auditor & Analyzer",
+  "description": "An interactive full-stack website analysis and audit tool powered by Gemini. Supports analyzing technical SEO, page performance, content copy, design usability, and tech stack detection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "appointment": {
+      "title": "Appointment",
+      "description": "An appointment booked by a prospective lead",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the appointment"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the lead"
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the lead"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the lead"
+        },
+        "company": {
+          "type": "string",
+          "description": "Optional company or organization of the lead"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date of the appointment"
+        },
+        "time": {
+          "type": "string",
+          "description": "Time of the appointment"
+        },
+        "service": {
+          "type": "string",
+          "description": "Specific service requested"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes from the lead"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Pending", "Contacted", "Confirmed"],
+          "description": "Operational status of the lead"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp in ISO format"
+        }
+      },
+      "required": ["id", "name", "email", "phone", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/appointments/{id}": {
+      "schema": "appointment",
+      "description": "Collection storing CRM leads and booking requests"
+    }
+  }
+}
